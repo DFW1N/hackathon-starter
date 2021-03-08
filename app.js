@@ -1,7 +1,9 @@
 /**
  * Module dependencies.
  */
-const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 const compression = require('compression');
 const session = require('express-session');
 const bodyParser = require('body-parser');
